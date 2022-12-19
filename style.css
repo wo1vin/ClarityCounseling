@@ -1,8 +1,185 @@
+/* CSS RESET
+    http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 /* CSS HEX to use: var(--pewter-blue) */
 :root{
---dark-jungle-green: #1c2321ff;
---pewter-blue: #7d98a1ff;
---black-coral: #5e6572ff;
+--dark-jungle-green: #1c2321;
+--pewter-blue: #7d98a1;
+--black-coral: #5e6572;
 --cadet-blue-crayola: #a9b4c2ff;
 --cultured: #eef1efff;
+}
+h1,h2,h3,h4,h5,li,span,a{
+    font-family: 'EB Garamond', serif;
+}
+body{
+    width: 100%;
+    font-size: 62.5%;
+    background: rgb(63,102,103);
+    background: -moz-linear-gradient(23deg, rgba(63,102,103,1) 14%, rgba(125,152,161,1) 36%, rgba(169,180,194,1) 53%, rgba(238,241,239,1) 88%);
+    background: -webkit-linear-gradient(23deg, rgba(63,102,103,1) 14%, rgba(125,152,161,1) 36%, rgba(169,180,194,1) 53%, rgba(238,241,239,1) 88%);
+    background: linear-gradient(23deg, rgba(63,102,103,1) 14%, rgba(125,152,161,1) 36%, rgba(169,180,194,1) 53%, rgba(238,241,239,1) 88%);
+}
+
+header{
+    margin: 3em  2em 0 2em;
+    height: 6em;
+}
+h3{
+    font-size: 2rem;
+    float: left;
+    width: fit-content;
+    padding:.5em 1em .5em 0;
+    border-right: 2px solid rgba(2,2,2,.2);
+}
+header ul{
+    float: left;
+    padding-left: 3em;
+}
+li{
+    font-size: 1.2rem;
+    line-height: 1.1;
+}
+
+.intro{
+    margin: 6em  6em 0 6em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    clear: both;
+}
+.intro > h1 {
+    width: 50%;
+    display: inline;
+    padding-left: 1em;
+    font-size: 2.5rem;
+}
+.intro div{
+    display: inline-block;
+    width: 50%;
+    
+}
+span, span > a{
+    display: block;
+    font-size: .8rem;
+}
+span > a{
+    color: var(--dark-jungle-green);
+    display: inline;
+}
+img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+h2{
+    font-size: 2rem;
+}
+.methods > p, .statememt{
+    margin: 2em;
+    font-size: 1.4rem;
+    font-style: italic;
+    text-align: center;
+}
+.cardTainer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* justify-content: space-evenly; */
+}
+.cardTainer ul{
+    list-style:var(--dark-jungle-green);
+    padding-left: 2.5em;
+}
+.cardTainer li{
+    font-size: 1.1rem;
+    margin-bottom: .2em;
+}
+/* section > .cardTainer .card{
+    height: 15em;
+} */
+.card{
+    padding: 1em 2em;
+    min-width: 20%;
+    height: 18em;
+    display: flex;
+    flex-direction: column;
+}
+.cardTainer.imgs .card{
+    justify-content: space-between;
+    height: 19em;
+}
+.card.circle div img{
+    width: 70%;
+}
+.card p,.creds p{
+    font-size: 1.1rem;
+    line-height: 1.1;
+    text-align: justify;
+}
+.card div{
+    display: flex;
+    justify-content: center;
+    width: inherit;
+    object-fit: contain;
+}
+h4{
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+.methods,.creds, footer{
+    margin: 6em;
+}
+.creds p{
+    font-size: 1.2rem;
+    margin: 1.25em 0;
 }
