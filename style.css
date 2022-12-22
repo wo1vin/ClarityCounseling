@@ -62,20 +62,17 @@ h1,h2,h3,h4,h5,li,span,a{
 body{
     width: 100%;
     font-size: 62.5%;
-    background: rgb(63,102,103);
-    background: -moz-linear-gradient(23deg, rgba(63,102,103,1) 14%, rgba(125,152,161,1) 36%, rgba(169,180,194,1) 53%, rgba(238,241,239,1) 88%);
-    background: -webkit-linear-gradient(23deg, rgba(63,102,103,1) 14%, rgba(125,152,161,1) 36%, rgba(169,180,194,1) 53%, rgba(238,241,239,1) 88%);
-    background: linear-gradient(23deg, rgba(63,102,103,1) 14%, rgba(125,152,161,1) 36%, rgba(169,180,194,1) 53%, rgba(238,241,239,1) 88%);
+    background: rgb(238,241,239);
 }
 
-header, .intro, .methods, .creds, footer{
-    margin-top: 10em;
-    padding-left: 6em;
-    padding-right: 6em;
+header, .intro, .methods, .steps, .creds, footer{
+    margin: 0 0 10em 0;
+    padding: 0 6em;
 }
 header{
-    margin-top: 2em;
     height: 6em;
+    display: flex;
+    justify-content: center;
 }
 h3{
     font-size: 2rem;
@@ -90,25 +87,28 @@ header ul{
 }
 li{
     font-size: 1.2rem;
-    line-height: 1.1;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .intro{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     clear: both;
 }
 .intro > h1 {
-    width: 50%;
+    width: 40%;
     display: inline;
     padding-left: 1em;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 .intro div{
     display: inline-block;
-    width: 50%;
-    
+    width: 35%;
+    height: 40em;
+    border: 3px solid black;
 }
 span, span > a{
     display: block;
@@ -124,13 +124,18 @@ img{
     object-fit: cover;
 }
 h2{
-    font-size: 1.6rem;
+    font-weight: 600;
+    font-size: 2.4rem;
     text-align: center;
+    margin: 0 0 1em;
+}
+h2.small{
+    font-size: 1.4rem;
+    margin: 0;
 }
 .methods > p, .statememt{
     margin: 2em;
     font-size: 1.4rem;
-    font-style: italic;
     text-align: center;
 }
 .boxTainer{
@@ -143,67 +148,151 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20%;
-    height: 16em;
+    width: 19%;
+    height: 14em;
     padding: 1.5em;
     background-color: whitesmoke;
-    margin-bottom: 2em;
     border-radius: 5em;
+    box-shadow: 0 0 4px 4px rgba(169,180,194,.6);
 }
 .boxHover p{
     display: none;
-}
-.cardTainer{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    /* justify-content: space-evenly; */
 }
 .boxHover ul{
     list-style:var(--dark-jungle-green);
     padding-left: 2em;
     display: none;
 }
-.cardTainer li{
-    font-size: 1.1rem;
-    margin-bottom: .2em;
-}
-/* section > .cardTainer .card{
-    height: 15em;
-} */
-.card{
-    padding: 1em 2em;
-    min-width: 20%;
-    height: 18em;
+.cardTainer{
     display: flex;
-    flex-direction: column;
+    align-items: flex-end;
 }
-.cardTainer.imgs .card{
-    justify-content: space-between;
-    height: 19em;
-}
-.card.circle div img{
-    width: 70%;
-}
-.card p,.creds p{
+.card p,.creds p, .steps p{
     font-size: 1.1rem;
     line-height: 1.1;
     text-align: justify;
 }
+.card.circle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .card div{
+    margin-bottom: 1em;
     display: flex;
     justify-content: center;
-    width: inherit;
-    object-fit: contain;
 }
-h4{
+.card div.circle{
+    margin-bottom: 3em;
+    width: 70%;
+}
+.steps{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+h5{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: .6em 0;
+}
+h2.title{
+    margin-bottom: 2em;
+}
+.steps div{
+    width: 18em;
+    height: 12em;
+    padding: 1em;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+}
+.steps div.lowerM h5{
+    margin-bottom: 2em;
+}
+
+button{
+    padding: .75em 1.25em;
+    background-color: #1c2321;
+    color: #e2e2e2;
+    border-radius: 1.2em;
+    box-shadow: 3px 3px 2px 2px rgb(2 2 2 / 20%);
+    font-size: 1.6rem;
+    margin: 0 42% 4em 42%;
+    font-family: 'Roboto', sans-serif;
+}
+/* .steps div{
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 40px solid rgba(2,2,2,.2);
+    border-bottom: 50px solid transparent;
+} */
+h4, label{
     font-weight: 600;
     font-size: 1.1rem;
     margin-bottom: 0.5em;
     text-align: center;
 }
-
+.creds, footer{
+    padding-left: 10em;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .creds p{
     font-size: 1.2rem;
-    margin: 1.25em 0;
+    /* margin: 1.25em 0; */
+    margin-left: 2.5em;
+
+}
+.creds li, .creds h4{
+    text-align: left;
+}
+.creds section.exp{
+    width: 100%;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    margin: 3em 0
+}
+.creds section.exp section{
+    margin-left: 5em;
+}
+/* .creds div{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+.creds .oval{
+    width: 20px;
+    height: 20px;
+    border-radius: 3.2em;
+    border: 6px solid #85afa1;
+    /* background-color: aquamarine; */
+}
+footer {
+    padding: 8em 0 ;
+    margin: 0;
+    background-color: #85afa1;
+    /* padding: 6em 10em 10em; */
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.client{
+    display: flex;
+    flex-direction: column;
+}
+form div{
+    display: flex;
+    flex-direction: column;
 }
