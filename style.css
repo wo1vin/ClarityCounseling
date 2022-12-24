@@ -71,8 +71,10 @@ header, .intro, .methods, .steps, .creds, footer{
 }
 header{
     height: 6em;
+    margin-top: 6em;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 h3{
     font-size: 2rem;
@@ -88,7 +90,7 @@ header ul{
 li{
     font-size: 1.2rem;
     line-height: 1.5;
-    text-align: center;
+    text-align: left;
 }
 
 .intro{
