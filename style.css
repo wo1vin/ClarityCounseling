@@ -3,7 +3,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -62,9 +61,9 @@ h1,h2,h3,h4,h5,li,span,a{
 body{
     width: 100%;
     font-size: 62.5%;
-    background: rgb(238,241,239);
+    background: var(--cadet-blue-crayola);
+    color: var(--dark-jungle-green)
 }
-
 header, .intro, .methods, .steps, .creds, footer{
     margin: 0 0 10em 0;
     padding: 0 6em;
@@ -73,6 +72,7 @@ header{
     height: 7em;
     margin-top: 6em;
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
@@ -81,7 +81,7 @@ h3{
     float: left;
     width: fit-content;
     padding:.5em 1em .5em 0;
-    border-right: 2px solid rgba(2,2,2,.2);
+    border-right: 1px solid var(--dark-jungle-green);
 }
 header ul{
     float: left;
@@ -89,13 +89,12 @@ header ul{
 }
 li{
     font-size: 1.2rem;
-    line-height: 1.5;
+    line-height: 1.2;
     text-align: left;
 }
-
 .intro{
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     clear: both;
