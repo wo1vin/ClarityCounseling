@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- header -->
-    <header class="fade-in-bottom container">
-        <h3>Clarity Counseling LLC</h3>
+    <!-- HEADER -->
+    <header class="header-container">
+        <h2>Clarity Counseling<br class="responsive-break"/><small> LLC</small></h2>
         <div class="rule"></div>
         <ul>
             <li><b>Rachel L. McClain M.A., LPC</b></li>
@@ -21,100 +21,102 @@
         </ul>
     </header>
 
-    <!-- intro -->
-    <section class="container">
-        <section class="intro fade-in-bottom">
-            <img src="assets/hearts.svg">
+    <!-- INTRO -->
+    <div class="intro-container">
+        <section class="intro">
+            <img src="assets/therapy.svg">
             <h1>
                 Hi, my name is <b>Rachel McClain Robinson</b> and I look forward to supporting you!
             </h1>
         </section>
-    </section>
 
-    <section class="container">
-        <section class="intro fade-in-bottom">
-            <h2> 
+        <section class="intro">
+            <h2>
                 I aid clients to balance out overwhelming emotions and thoughts through psychotherapy. 
             </h2>
-            <img src="assets/MotivationalInterviewing.png">
+            <img src="assets/balance.svg">
         </section>
-    </section>
+    </div>
 
-    <!-- methods -->
-    <section class="container">
-        <section class="methods">
-
-            <p>I believe in providing research-based treatments in order to obtain measurable, positive progress.</p>
-
-            <div class="boxTainer">
-            
-            <article class="boxHover">
-                <h2 class="small primaryContent">Motivational Interviewing</h2>
-                <ul class="secondaryContent">
-                    <li>Core Mindfulness</li>
-                    <li>Distress Tolerance</li>
-                    <li>Emotional Regulation</li>
-                    <li>Interpersonal Effectiveness</li>
-                </ul>
-            </article>
+    <!-- CARDS -- currently working on cards -->
+    <div class="card-container">
+        <p class="card-title">
+            I believe in providing research-based treatments in order to obtain measurable, positive progress.
+        </p>
+        <section class="card-grid">
+            <ul class=card>
+                <li class="card-front ">
+                    <h2>Motivational Interviewing</h2>
+                </li>
+                <li class = "card-back ">
+                    <p>
+                        Core Mindfulness<br />
+                        Distress Tolerance<br />
+                        Emotional Regulation<br />
+                        Interpersonal Effectiveness
+                    </p>
+                </li>
+            </ul>
         
-            <article class="boxHover">
-                <h2 class="small primaryContent">Cognitive Behavioral Therapy</h2>
-                <p class="secondaryContent">The main theory behind Cognitive Behavioral Therapy is that your thoughts, feelings, and behaviors all impact each other.</p>
-            </article>
+            <!-- <section class="card">
+                <h2 class="card-front">Cognitive Behavioral Therapy</h2>
+                <p class="card-back">The main theory behind Cognitive Behavioral Therapy is that your thoughts, feelings, and behaviors all impact each other.</p>
+            </section>
 
-            <article class="boxHover">
-                <h2 class="small primaryContent">Solution-Focused Therapy</h2>
-                <p class="secondaryContent">Solution-focused therapy is a future-focused, goal-directed approach to therapy that highlights the importance of searching for solutions.</p>
-            </article>
+            <section class="card">
+                <h2 class="card-front">Solution-Focused Therapy</h2>
+                <p class="card-back">Solution-focused therapy is a future-focused, goal-directed approach to therapy that highlights the importance of searching for solutions.</p>
+            </section>
             
-            <article class="boxHover">
-                <h2 class="small primaryContent">Dialectical Behavior Therapy</h2>
-                <p class="secondaryContent">DBT focuses on skills training and includes mindfulness, emotion regulation, interpersonal effectiveness and distress tolerance. </p>
-            </article>
-
+            <section class="card">
+                <h2 class="card-front">Dialectical Behavior Therapy</h2>
+                <p class="card-back">DBT focuses on skills training and includes mindfulness, emotion regulation, interpersonal effectiveness and distress tolerance. </p>
+            </section> -->
         </section>
-    </section>
+    </div>
 
-        <!--UNUSED
-        <p class="statememt">Core Values</p>
-        <ul>
-                <li><h2>Research</h2></li>
-                <li><h2>Teaching</h2></li>
-                <li><h2>Empowerment</h2></li>
-                <li><h2>Advocacy</h2></li>
-        </ul> -->
+    <!--UNUSED
+    <p class="statememt">Core Values</p>
+    <ul>
+            <li><h2>Research</h2></li>
+            <li><h2>Teaching</h2></li>
+            <li><h2>Empowerment</h2></li>
+            <li><h2>Advocacy</h2></li>
+    </ul> -->
 
-    </section>
-
-    <!-- steps -->
-    <section class="container">
-        <h2>Start your path in just three steps:</h2>
-        <section class="steps">
-            <div>
-                <h5>Step 1</h5>
+    <!-- STEPS -->
+    <div class="step-container">
+        <h2 class="title">Start your path in just three steps:</h2>
+        <section class="step-grid">
+            <section class="step">
+                <h2>Step 1</h2>
                 <ul>
                     <li>Assessment</li>
                     <li>Consent Form</li>
                     <li>Paperwork</li>
                 </ul>
-            </div>
-            <span>&#8605;</span>
-            <div class="lowerM">
-                <h5>Step 2</h5>
-                <p>Intake Information</p>
-            </div>
-            <span>&#8605;</span>
-            <div class="lowerM">
-                <h5>Step 3</h5>
-                <p>Begin Treatment</p>
-            </div>
-        </section>
-    </section>
+            </section>
 
-    <section class="container">
-        <h2>Experience</h2>
-        <section class="expContainer">
+            <img src="./assets/arrow.svg" />
+            
+            <section class="step">
+                <h2>Step 2</h2>
+                <p>Intake Information</p>
+            </section>
+
+            <img src="./assets/arrow.svg" />
+
+            <section class="step">
+                <h2>Step 3</h2>
+                <p>Begin Treatment</p>
+            </section>
+        </section>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="exp-container">
+        <h2 class="title">Experience</h2>
+        <section class="exp">
             <div class="bullet"></div>
             <ul>
                 <li><h4>University of Central Oklahoma (UCO)</h4></li>
@@ -124,7 +126,7 @@
             </ul>
         </section>
 
-        <section class="expContainer">
+        <section class="exp">
             <div class="bullet"></div>
             <ul>
                 <li><h4>University of Central Oklahoma (UCO)</h4></li>
@@ -133,38 +135,31 @@
             </ul>
         </section>
 
-        <section class="expContainer">
+        <section class="exp">
             <div class="bullet"></div>
-            <p> 
-                Clinician with extensive training in trauma-informed treatments.
-            </p>
+            <ul>
+                <li><h4>Clinician</h4></li>
+                <li>Extensive training in trauma-informed treatments.</li>
+            </ul>
         </section>
-    </section>
+    </div>
 
-    <footer class="container">
-        <h2>Reach Out</h2>
-        <form>
-            <div class="formContainer">
-                <label for="name">Name</label>
-                <input type="text" name="name">
-            </div>
-            <div class="formContainer">
-                <label for="email">E-mail</label>
-                <input type="email" name="email">
-            </div>
-            <div class="formContainer">
-                <label for="number">Phone Number</label>
-                <input type="number" verify>
-            </div>
-            <div class="formContainer">
-                <label for="message">Message</label>
-                <textarea name="message""></textarea>
-            </div>
-            <div class="formContainer">
-                <button class="inquire">Send</button>
-            </div>
-        </form>
-        <!-- contact form? questions? concerns? -->
-    </footer>
+    <!-- CONTACT -->
+    <div class="contact-container">
+        <section>
+            <h2 class="title">Reach Out</h2>
+
+            <form method="post" action="#" id="contact-form" netlify>
+                <input type="text" name="first" id="first" placeholder="First Name" />
+                <input type="text" name="last" id="last" placeholder="Last Name" />
+                <input type="tel" name="phone" id="phone" placeholder="Phone Number" />
+                <input type="email" name="email" id="email" placeholder="Email" />
+                <input type="text" name="subject" id="subject" placeholder="Subject" />
+                <textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+                <input type="submit" id="submit" value="Send Message" />
+            </form>
+        </section>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>

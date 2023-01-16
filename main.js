@@ -1,10 +1,23 @@
-const boxHover = document.querySelector(".boxHover");
-const primaryContent = document.querySelector(".primaryContent");
-const secondaryContent = document.querySelector(".secondaryContent");
+const cards = document.querySelectorAll(".card");
 
-const methods = boxHover.forEach(e => {boxHover.addEventListener("mouseover", swapContent())})
+cards.forEach( card => {
+    const cardFront = card.children[0];
+    const cardBack = card.children[1];
 
-const swapContent = () => {
-    primaryContent.style.display="none";
-    secondaryContent.style.display="flex";
-}
+    card.addEventListener("mouseover", (event) => {
+        event.preventDefault();
+        cardFront.classList.remove("card-front-slide-in");
+        cardBack.classList.remove("card-back-slide-out");
+        cardFront.classList.add("card-front-slide-out");
+        cardBack.classList.add("card-back-slide-in");
+    });
+
+    card.addEventListener("mouseout", (event) => {
+        event.preventDefault();
+        cardFront.classList.remove("card-front-slide-out");
+        cardBack.classList.remove("card-back-slide-in");
+        cardFront.classList.add("card-front-slide-in");
+        cardBack.classList.add("card-back-slide-out");
+    });
+
+});
