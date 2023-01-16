@@ -224,12 +224,12 @@ header::before {
 
 
 .intro > img {
-    min-width: 19rem;
-    width: 30vw;
+    max-width: 80vw;
+    width: 35rem;
 }
 
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 800px) {
     .intro-container {
         padding-top: 5rem;
     }
@@ -601,10 +601,10 @@ textarea {
     -webkit-appearance: none;
     -ms-appearance: none;
     appearance: none;
-    background: var(--background-medium);
+    background: var(--background-light);
     border-radius: 1rem;
     border: solid 2px transparent;
-    color: var(--foreground-light);
+    color: var(--foreground-dark);
     font-family: 'Roboto',sans-serif;
     font-size: var(--s-font);
     outline: 0;
@@ -626,7 +626,7 @@ input[type="tel"]:focus,
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: var(--foreground-light);
+    border-color: var(--foreground-dark);
     font-family: 'Roboto',sans-serif;
     font-size: var(--s-font);
 }
@@ -636,7 +636,7 @@ input[type="tel"]::placeholder,
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
 textarea::placeholder {
-    color: var(--foreground-light);
+    color: var(--foreground-dark);
     font-family: 'Roboto',sans-serif;
     font-size: var(--s-font);
 }
