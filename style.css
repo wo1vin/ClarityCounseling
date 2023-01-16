@@ -8,7 +8,7 @@
     --foreground-light: #fcfcfc;
     --foreground-dark: #1E3D58;
     --highlight: #057DCD;
-    /* ROSE GOLD */
+    /* ROSE GOLD - meh */
     /*--background-medium: #B76E79;
     --background-dark: #68343B;
     --foreground: #FADCD9;
@@ -582,6 +582,7 @@ p.card-back {
     flex-flow: column nowrap;
     justify-content: center;
     padding-bottom: 2rem;
+    width: var(--viewport-width);
 }
 
 
@@ -662,18 +663,19 @@ textarea::placeholder {
 }
 
 
-#first, #last, #phone, #email {  
-  width: 29.5rem;
+#first, #last, #phone, #email {
+    width: 29.5rem;
 }
 
 
 #subject, #message {
-  width: 60rem;
+    max-width: 98vw;
+    width: 60rem;
 }
 
 
 #message {
-  height: 30rem;
+    height: 30rem;
 }
 
 
@@ -700,20 +702,25 @@ textarea::placeholder {
 }
 
 
-@media screen and (max-width: 650px) {
-    #first, #last, #phone, #email, #subject, #message {
-        grid-column: 1/3;
-        width: 98vw;
-    }
-    
-
+@media screen and (max-width: 800px) {
+    #first,
+    #last,
+    #phone,
+    #email,
+    #subject,
     #message {
-        height: 15rem;
+        width: 98vw;
+        grid-column: 1/3;
     }
 
 
     #submit {
         grid-column: 1/3;
+    }
+
+    
+    #message {
+        height: 15rem;
     }
 }
 
@@ -721,10 +728,11 @@ textarea::placeholder {
 /* ANIMATIONS */
 
 
-.card-front-slide-in {
+:not(.card-front-slide-in:hover) {
 	-webkit-animation: card-front-slide-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: card-front-slide-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
 
 
 @-webkit-keyframes card-front-slide-in {
@@ -756,7 +764,7 @@ textarea::placeholder {
 
 
 
-.card-front-slide-out {
+.card-front-slide-out:hover {
 	-webkit-animation: card-front-slide-out 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: card-front-slide-out 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -790,7 +798,7 @@ textarea::placeholder {
 }
 
 
-.card-back-slide-in {
+.card-back-slide-in:hover {
 	-webkit-animation: card-back-slide-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: card-back-slide-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -824,7 +832,7 @@ textarea::placeholder {
 }
 
 
-.card-back-slide-out {
+:not(.card-back-slide-out:hover) {
 	-webkit-animation: card-back-slide-out 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: card-back-slide-out 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
