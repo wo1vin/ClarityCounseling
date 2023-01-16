@@ -47,12 +47,8 @@ body {
 header.header-container {
     align-items: center;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
-}
-
-
-header {
     overflow: hidden;
     padding-bottom: 6rem;
     padding-top: 6rem;
@@ -60,31 +56,31 @@ header {
 }
 
 
-header > h2 {
+header.header-container > h2 {
     font-size: var(--xl-font);
     font-weight: 500;
     padding-right: 2rem;
 }
 
 
-br.responsive-break {
+header.header-container > h2 > br.responsive-break {
     display: none;
 }
 
 
-header > h2 > small {
+header.header-container > h2 > small {
     font-size: calc(var(--xl-font) - 1.5rem);
     padding-left: 1rem;
 }
 
 
-header > .rule {
+header.header-container > div.rule {
     border-right: 1px solid var(--foreground-light);
     height: 4.2rem;
 }
 
 
-header ul {
+header.header-container > ul {
     display: flex;
     flex-flow: column nowrap;
     font-size: var(--xs-font);
@@ -92,13 +88,13 @@ header ul {
 }
 
 
-header > ul > li:first-of-type {
+header.header-container > ul > li:first-of-type {
     font-size: calc(var(--xs-font) + 0.1rem);
     font-weight: 500;
 }
 
 
-header > ul > li {
+header.header-container > ul > li {
     line-height: 1.5rem;
     text-align: left;
 }
@@ -121,27 +117,28 @@ header::before {
 
 
 @media screen and (max-width: 670px) {
-    header {
+    header.header-container {
+        flex-flow: column nowrap;
         padding: 1.2rem 0;
+        width: var(--viewport-width);
     }
 
 
-    header > h2 {
-        border-right: 0;
+    header.header-container > h2 {
         border-bottom: 1px solid var(--foreground-light);
-        font-size: var(--xl-font);
         padding: 3rem 0 1.2rem 0;
         text-align: center;
-        width: calc(var(--viewport-width) -2rem);
+        width: fit-content;
     }
 
 
     header > h2 > small {
-        font-size: calc(var(--xl-font) - 1.5rem)
+        margin: -0.7rem;
+        padding: 0;
     }
 
 
-    header > ul {
+    header.header-container > ul {
         align-items: center;
         font-size: var(--xs-font);
         padding: 1.2rem 0;
@@ -149,13 +146,13 @@ header::before {
     }
 
 
-    header > ul > li {
+    header.header-container > ul > li {
         line-height: 1.2rem;
     }
 
 
-    header > div.rule {
-        border-right: 0;
+    header.header-container > div.rule {
+        display: none;
     }
 }
 
@@ -163,19 +160,12 @@ header::before {
 @media screen and (max-width: 400px) {
     header > h2 {
         font-size: calc(var(--xl-font) - 0.2rem);
-        font-weight: 500;
         padding-right: 0;
     }
-    
-    
-    header > h2 > small {
-        font-size: calc(var(--xl-font) - 1.5rem);
-        padding: 0;
-    }
 
 
-    br.responsive-break {
-        display: inline;
+    header.header-container > h2 > br.responsive-break {
+        display:inline;
     }
 }
 
@@ -718,7 +708,7 @@ textarea::placeholder {
         grid-column: 1/3;
     }
 
-    
+
     #message {
         height: 15rem;
     }
