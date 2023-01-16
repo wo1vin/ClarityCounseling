@@ -1,16 +1,10 @@
 :root{
     /* COLOR VARIABLES */
-
     --background-medium: #B76E79;
     --background-dark: #68343B;
     --foreground: #FADCD9;
     --highlight: #24456A;
-    --box-shadow: 0.5rem 0.8rem 1rem 0.1rem rgb(0,0,0,0.3);
     /* MEASUREMENT VARIABLES */
-    --desktop-container-padding: ;
-    --mobile-container-padding: ;
-    --desktop-element-padding: 4rem;
-    --mobile-element-padding: 3.5rem;
     --card-size: 18rem;
     --viewport-width: calc(100vw - (100vw - 100%));
     /* FONT SIZES */
@@ -126,7 +120,7 @@ header::before {
         font-size: var(--xl-font);
         padding: 3rem 0 1.2rem 0;
         text-align: center;
-        width: var(--mobile-max-width);
+        width: var(--viewport-width);
     }
 
 
@@ -366,13 +360,6 @@ p.card-back {
 }
 
 
-@media screen and (max-width: 600px) {
-    .card {
-        margin-top: var(--desktop-element-padding);
-    }
-}
-
-
 /* STEPS */
 
 
@@ -522,7 +509,7 @@ p.card-back {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    padding-bottom: var(--desktop-element-padding);
+    padding-bottom: 4rem;
     width: var(--viewport-width);
 }
 
@@ -648,7 +635,7 @@ textarea::placeholder {
 
 
 #first, #last, #phone, #email, #subject {
-  height: 5rem;
+  height: 4rem;
 }
 
 
@@ -670,10 +657,12 @@ textarea::placeholder {
 #submit {
     align-self: center;
     background-color: var(--background-dark);
-    border: 1px solid var(--foreground);
-    border-radius: 1rem;
+    border: 2px solid var(--foreground);
+    border-radius: 0.8rem;
     color: var(--foreground);
-    padding: 2rem;
+    height: 4rem;
+    justify-self: flex-end;
+    padding: 0 2rem;
     font-size: 1.2rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -683,7 +672,7 @@ textarea::placeholder {
 
 #submit:hover {
     background: var(--foreground);
-    border: 1px solid var(--foreground);
+    border: 2px solid var(--foreground);
     color: var(--background-dark);
 }
 
