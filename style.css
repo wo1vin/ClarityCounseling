@@ -313,6 +313,7 @@ header::before {
 
 
 .card-frame {
+    border-radius: 5rem 5rem 5rem 0;
     height: var(--card-size);
     overflow: hidden;
     width: var(--card-size);
