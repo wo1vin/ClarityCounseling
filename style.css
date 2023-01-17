@@ -636,7 +636,7 @@ textarea {
     -ms-appearance: none;
     appearance: none;
     background: var(--background-light);
-    border-radius: 1rem;
+    border-radius: 0.3rem;
     border: solid 2px transparent;
     color: var(--foreground-dark);
     font-family: 'Roboto',sans-serif;
@@ -683,23 +683,23 @@ textarea::placeholder {
 
 
 #first, #last, #phone, #email, #subject {
-  height: 4rem;
+  height: 2.5rem;
 }
 
 
 #first, #last, #phone, #email {
-    width: 29.5rem;
+    width: 19.5rem;
 }
 
 
 #subject, #message {
     max-width: 98vw;
-    width: 60rem;
+    width: 40rem;
 }
 
 
 #message {
-    height: 30rem;
+    height: 20rem;
 }
 
 
@@ -709,7 +709,7 @@ textarea::placeholder {
     border: 2px solid var(--foreground-light);
     border-radius: 0.8rem;
     color: var(--foreground-light);
-    height: 4rem;
+    height: 3.5rem;
     justify-self: flex-end;
     padding: 0 2rem;
     font-size: 1.2rem;
@@ -727,7 +727,7 @@ textarea::placeholder {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 650px) {
     #first,
     #last,
     #phone,
