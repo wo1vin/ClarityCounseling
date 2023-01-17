@@ -220,7 +220,8 @@ header::before {
 .intro > h1 ,
 .intro > h2 {
     font-size: var(--l-font);
-    width: calc(var(--viewport-width) - 70%);
+    padding: 2rem;
+    width: calc(var(--viewport-width) - 60%);
 }
 
 
@@ -236,7 +237,7 @@ header::before {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .intro-container {
         padding-top: 5rem;
     }
