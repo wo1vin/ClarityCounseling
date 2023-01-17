@@ -435,7 +435,7 @@ li.card-back > p {
         pointer-events: none;
         width: var(--card-size);
     }
-    
+     
     
     li.card-back > p {
         align-items: center;
