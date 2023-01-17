@@ -29,6 +29,8 @@
 
 * {
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 
@@ -210,6 +212,11 @@ header::before {
 }
 
 
+.intro:last-of-type > img {
+    width: 25rem;
+}
+
+
 .intro > h1 ,
 .intro > h2 {
     font-size: var(--l-font);
@@ -259,7 +266,7 @@ header::before {
     .intro > h1 ,
     .intro > h2 {
         font-size: var(--m-font);
-        width: calc(var(--viewport-width) - 8%);
+        width: 98vw;
     }
 }
 
@@ -271,9 +278,10 @@ header::before {
     background: linear-gradient(45deg, var(--background-medium), var(--background-light));
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    overflow: hidden; /*todo remove later */
     padding: 6rem 0;
-    width: var(--viewport-width);
+    width: var(--viewport-width); 
 }
 
 
@@ -283,7 +291,7 @@ header::before {
     display: flex;
     font-size: var(--xl-font);
     font-weight: 500;
-    justify-content: center;
+    justify-self: center;
     margin: 0 auto;
     max-width: 50rem;
     min-width: 20rem;
@@ -297,67 +305,90 @@ header::before {
     align-items: center;
     display: flex;
     flex-flow: row wrap;
-    gap: 1rem;
-    justify-content: center;
+    height: max-content;
+    justify-content: space-evenly;
+    max-width: 130rem;
+    width: var(--viewport-width);
 }
 
 
-ul.card {
-    position: relative;
-    top: 0;
-    left: 0;
-    align-items: center;
-    background: var(--background-light);
-    display: flex;
-    flex-flow: row nowrap;
-    font-size: var(--m-font);
+.card-frame {
     height: var(--card-size);
-    justify-content:center;
     overflow: hidden;
     width: var(--card-size);
 }
 
 
-ul.card > li {
+ul.card {
+    align-items: flex-start;
+    background: var(--background-light);
+    display: flex;
+    flex-flow: row nowrap;
     font-family: 'Roboto',sans-serif;
-    height: var(--card-size);
-    width: var(--card-size);
+    font-size: var(--m-font);
+    height: fit-content;
+    justify-content: flex-start;
+    overflow: hidden;
+    width: fit-content;
 }
 
 
-.card-front {
-    border: 1px solid white;
+li.card-front {
     align-items: center;
     background: var(--background-light);
     color: var(--foreground-dark);
     display: flex;
+    height: var(--card-size);
     padding: 1rem;
     pointer-events: none;
     text-align: left;
     text-transform: uppercase;
+    width: var(--card-size);
 }
 
 
 li.card-back {
+    align-items: center;
     background: var(--background-dark);
     color: var(--foreground-light);
+    display: flex;
     font-size: var(--xs-font);
-    height: 100%;
+    height: var(--card-size);
     justify-content: center;
     padding: 2rem;
     pointer-events: none;
-    width: 100%;
+    width: var(--card-size);
 }
 
 
-p.card-back {
+li.card-back > p {
     align-items: center;
-    background: var(--background-dark);
     flex-flow: column wrap;
     letter-spacing: 0.1rem;
     line-height: 1.3;
-    padding: 2rem;
     text-align: left;
+}
+
+
+@media screen and (max-width: 1250px) {
+    .card-grid {
+        display: flex;
+        height: calc(var(--card-size) * 2.25);
+        gap: 2rem;
+        justify-content: space-evenly;
+        width: calc(var(--card-size) * 2.4);
+    }
+}
+
+
+@media screen and (max-width: 680px) {
+    .card-grid {
+        display: flex;
+        flex-flow: column nowrap;
+        height: calc(var(--card-size) * 5);
+        justify-content: space-evenly;
+        width: var(--viewport-width);
+    }
 }
 
 
@@ -380,12 +411,13 @@ p.card-back {
     flex-flow: row nowrap;
     height: 20rem;
     justify-content: space-evenly;
-    width: calc(var(--viewport-width) - 5rem); 
+    width: var(--viewport-width);
 }
 
 
 .step-grid > img {
-    width: calc((var(--viewport-width) - 5rem) / 6);
+    max-width: 98vw;
+    width: 10rem;
 }
 
 
@@ -454,14 +486,15 @@ p.card-back {
 @media screen and (max-width: 800px) {
     .step-grid {
         flex-flow: column nowrap;
+        justify-content: space-around;
         height: fit-content;
-        max-width: 320px;
-        width: calc(var(--viewport-width) / 1.5);
+        width: 98vw;
     }
 
 
     .step-grid > img {
         transform: rotate(90deg);
+        max-width: 98vw;
         width: 10rem;
     }
 
@@ -482,7 +515,7 @@ p.card-back {
     
     .step {
         height: fit-content;
-        width: calc(var(--viewport-width) / 1.5);
+        max-width: 98vw;
     }
 
     
@@ -685,7 +718,8 @@ textarea::placeholder {
 }
 
 
-#submit:hover {
+#submit:hover,
+#submit:active {
     background: var(--background-light);
     border: 2px solid var(--foreground-light);
     color: var(--background-dark);
@@ -718,7 +752,7 @@ textarea::placeholder {
 /* ANIMATIONS */
 
 
-:not(.card-front-slide-in:hover) {
+.card-front-slide-in {
 	-webkit-animation: card-front-slide-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: card-front-slide-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -727,8 +761,8 @@ textarea::placeholder {
 
 @-webkit-keyframes card-front-slide-in {
     0% {
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
+        -webkit-transform: translateX(calc(-1 * var(--card-size)));
+        transform: translateX(calc(-1 * var(--card-size)));
     }
 
 
@@ -741,20 +775,20 @@ textarea::placeholder {
 
 @keyframes card-front-slide-in {
     0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+        -webkit-transform: translateX(calc(-1 * var(--card-size)));
+        transform: translateX(calc(-1 * var(--card-size)));
     }
 
 
     100% {
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
 }
 
 
 
-.card-front-slide-out:hover {
+.card-front-slide-out {
 	-webkit-animation: card-front-slide-out 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: card-front-slide-out 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -768,8 +802,8 @@ textarea::placeholder {
 
 
     100% {
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
+        -webkit-transform: translateX(calc(-1 * var(--card-size)));
+        transform: translateX(calc(-1 * var(--card-size)));
     }
 }
 
@@ -782,13 +816,13 @@ textarea::placeholder {
 
 
     100% {
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
+        -webkit-transform: translateX(calc(-1 * var(--card-size)));
+        transform: translateX(calc(-1 *  var(--card-size)));
     }
 }
 
 
-.card-back-slide-in:hover {
+.card-back-slide-in {
 	-webkit-animation: card-back-slide-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: card-back-slide-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -796,33 +830,33 @@ textarea::placeholder {
 
 @-webkit-keyframes card-back-slide-in {
     0% {
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
 
 
     100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+        -webkit-transform: translateX(calc(-1 * var(--card-size)));
+        transform: translateX(calc(-1 * var(--card-size)));
     }
 }
 
 
 @keyframes card-back-slide-in {
     0% {
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
 
 
     100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+        -webkit-transform: translateX(calc(-1 * var(--card-size)));
+        transform: translateX(calc(-1 * var(--card-size)));
     }
 }
 
 
-:not(.card-back-slide-out:hover) {
+.card-back-slide-out {
 	-webkit-animation: card-back-slide-out 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: card-back-slide-out 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -830,27 +864,27 @@ textarea::placeholder {
 
 @-webkit-keyframes card-back-slide-out {
     0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+        -webkit-transform: translateX(calc(-1 * var(--card-size)));
+        transform: translateX(calc(-1 * var(--card-size)));
     }
 
 
     100% {
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
 }
 
 
 @keyframes card-back-slide-out {
     0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+        -webkit-transform: translateX(calc(-1 * var(--card-size)));
+        transform: translateX(calc(-1 * var(--card-size)));
     }
 
 
     100% {
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
 }
