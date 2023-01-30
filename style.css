@@ -472,7 +472,7 @@ li.card-back > p {
 
 .step-grid > img {
     max-width: 98vw;
-    width: 10rem;
+    width: 6rem;
 }
 
 
@@ -494,7 +494,7 @@ li.card-back > p {
 
 
 .step > h2 {
-    font-size: var(--xl-font);
+    font-size: var(--l-font);
     font-weight: 600;
     padding-bottom: 1.2rem;
 }
@@ -502,7 +502,7 @@ li.card-back > p {
 
 .step ul, .step p {
     color: var(--foreground-dark);
-    font-size: var(--m-font);
+    font-size: var(--s-font);
     justify-self: center;
 }
 
