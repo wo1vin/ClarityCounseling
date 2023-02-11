@@ -175,14 +175,16 @@ header::before {
 /* TITLE */
 
 
-.title {
+.title , .titleSteps {
     color: var(--foreground-dark);
     font-size: var(--xl-font);
     font-weight: 600;
-    padding: 4rem;
+    padding: 5rem 0 3rem 0;
     text-align: center;
 }
-
+.titleSteps{
+    padding: 6rem 0 0 0;
+}
 
 /* INTRO */
 
@@ -296,7 +298,7 @@ header::before {
     margin: 0 auto;
     max-width: 50rem;
     min-width: 20rem;
-    padding-bottom: 6rem;
+    padding-bottom: 5rem;
     text-align: left;
     width: 50vw;
 }
@@ -659,7 +661,7 @@ li.card-back > p {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     width: var(--viewport-width);
 }
 
@@ -753,7 +755,7 @@ textarea::placeholder {
 
 
 #message {
-    height: 20rem;
+    height: 16rem;
 }
 
 
