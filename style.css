@@ -1027,3 +1027,8 @@ textarea::placeholder {
         transform: translateX(0);
     }
 }
+p{
+    font-size: var(--xs-font);
+    text-align: center;
+    margin-bottom: 1rem;
+}
