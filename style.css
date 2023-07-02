@@ -1034,7 +1034,9 @@ textarea::placeholder {
 p{
     font-size: var(--xs-font);
     text-align: center;
-    margin-bottom: 1rem;
+}
+p+p{
+    margin-bottom: 2rem;
 }
 
 ul{
