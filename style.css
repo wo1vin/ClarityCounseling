@@ -482,12 +482,12 @@ li.card-back > p {
 }
 
 
-.step > h2 {
+.step > h2 , .ins{
     color: var(--foreground-dark);
 }
 
 
-.step { /* task: use grid so that h2 stays at top and ul/p center */
+.step , .ins{ /* task: use grid so that h2 stays at top and ul/p center */
     align-items: center;
     display: flex;
     flex-flow: column nowrap;
@@ -499,46 +499,46 @@ li.card-back > p {
 }
 
 
-.step > h2 {
+.step > h2 , .ins > h2 {
     font-size: var(--l-font);
     font-weight: 600;
     padding-bottom: 1.2rem;
 }
 
 
-.step ul, .step p {
+.step ul, .step p , .ins ul {
     color: var(--foreground-dark);
     font-size: var(--s-font);
     justify-self: center;
 }
 
 
-.step ul {
+.step ul  , .ins ul{
     list-style: disc;
     padding-left: 1.4rem;
     text-align: left;
 }
 
 
-.step:first-of-type {
+.step:first-of-type , .ins:first-of-type {
     padding-left: 3rem;
 }
 
 
-.step:last-of-type {
+.step:last-of-type , .ins:last-of-type {
     padding-right: 3rem;
 }
 
 
 @media screen and (max-width: 950px) {
-    .step > h2 {
+    .step > h2 , .ins > h2 {
         font-size: var(--m-font);
         font-weight: 600;
         padding-bottom: 1.2rem;
     }
 
 
-    .step ul, .step p {
+    .step ul, .step p , .ins ul {
         font-size: var(--s-font);
         justify-self: center;
     }
@@ -560,33 +560,33 @@ li.card-back > p {
     }
 
 
-    .step > h2 {
+    .step > h2  , .ins > h2{
         font-size: var(--l-font);
         font-weight: 600;
         padding-bottom: 1.2rem;
     }
 
 
-    .step ul, .step p {
+    .step ul, .step p  , .ins ul{
         font-size: var(--m-font);
         justify-self: center;
     }
     
     
     
-    .step {
+    .step , .ins {
         height: fit-content;
         max-width: 98vw;
     }
 
     
-    .step:first-of-type {
+    .step:first-of-type  , .ins:first-of-type{
         padding-left: 0;
         padding-top: 7rem;
     }
     
     
-    .step:last-of-type {
+    .step:last-of-type , .ins:last-of-type {
         padding-right: 0;
         padding-bottom: 7rem;
     }
@@ -1047,4 +1047,15 @@ p+p{
 .principles{
     background-color: #057DCD;
     font-size: var(--m-font);
+}
+.ins{
+    display: flex;
+    flex-direction: row;
+}
+.ins .step{
+    align-items: flex-start;
+    padding: 0 3rem;
+}
+.ins h2{
+    font-size: var(--s-font);
 }
