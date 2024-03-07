@@ -8,7 +8,5 @@ This project was built with HTML, CSS, and a bit of JS.
 It is currently hosted on Netlify.com for free under Denisse Del Monte's (my) account.
 The domain is managed through Clarity Relationships' NameCheap account.
 
-<!-- To edit this project:
--  Fork this repo
--  Make edits
--  Publish the changes -->
+## Devs
+Please edit this file to reflect the latest information
