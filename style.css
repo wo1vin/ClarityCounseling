@@ -1059,3 +1059,6 @@ p+p{
 .ins h2{
     font-size: var(--s-font);
 }
+.footer a{
+    color: white;
+}
